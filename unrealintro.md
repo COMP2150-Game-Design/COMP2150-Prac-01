@@ -1,123 +1,71 @@
-# Week 01 - Intro to Unreal and Toy Analysis
+# Getting Started With Unreal Engine
 
-![TODO: An overview of the whole intro level map.]()
+This document is meant as a resource to help you get started with using Unreal Engine. If you're already familiar with Unreal, such as through COMP1170 or your own studies, you may already know a lot of this. However, feel free to come back to this document whenever you need to brush up on the fundamentals of moving about the engine.
 
-Welcome to the COMP2150 Pracs! In these pracs, you'll be working on the digital side of game design: building levels, prototypes and games as you work towards your two major assessments.
+Note: additional features, like working with materials, will be introduced when necessary in class.
 
-Today's class will be focused on getting familiar with Unreal Engine by way of exploring the game you will be building a level for for the first assignment. Your prac demonstrator will be going over slides and directing activities throughout the lesson, while this sheet will serve to give you further details as you go.
+The default layout of Unreal Engine should look somewhat familiar to you if you've used Unity, Blender, or other game and 3D modelling tools. But it has its own quirks Taking a look at the main view of Unreal Engine, we can see:
 
-Don't hesitate to speak up if you are stuck or unsure about anything! GLHF!
+* Viewport: The main view of our level. This is where we can arrange our objects and navigate our space.
 
-By the end of this worksheet, you should:
+* Outliner: A hierarchical view of all the objects and folders in our level. We can turn the visibility of these on and off, and search for certain elements in our levels as well.
 
-* Have your GitHub account linked to your Student ID.
-* Know how to clone, commit and push to GitHub repos.
-* Understand how to edit Unreal Engine levels.
+* Details: The details (such as different components/blueprints attached) of the currently selected object.
 
-## Assignment deliverable
-Today you will be analysing the core toy of the game you will be working on for the level design assignment: CryoShock. The notes, insights and artefacts you make today will help you build your levels more thoughtfully.
+* Content Drawer: By default this is tucked away, but will be useful later and store all the assets inside our project.
 
-## Task 0: Acknowledgements and Ice-Breakers (5 min)
-Your instructor will run through any acknowledgements and ice-breakers with you as a class to ensure you are familiar with your peers.
+![Unreal Engine main view.](images/UnrealEngineInterface.png)
 
-## Task 1: GitHub and GitHub Classroom (10 min)
+Spend a bit of time getting used to flying around the level we've provided you in the Editor view. Some controls to get you started:
 
-### Linking your account and Student ID
+## Navigating The Viewport
+As a level designer, you'll spend a lot of your time working in the viewport. Tou can use your mouse and keyboard to navigate the viewport. The controls are, in brief:
 
-When you clicked the link to accept this task, you would have been prompted to select your Student ID from a roster that looks something like this:
+* Holding left click and moving the mouse left and right will pan left and right.
+* Holding right click and moving the mouse will pan left and right and tilt up and down.
+* Holding both mouse buttons, or the middle mouse button, will move the camera side to side, up and down.
+* With any of these mouse buttons pressed, pressing the WASD keys will "fly" through the environment.
+* The scroll wheel will zoom in and out.
 
-![Image of the roster](images/selectnumber.png)
+# Placing and manipulating objects
+To modify the position, scale or rotation of an object, you'll first want to select it. You can do this either in the Viewport directly, or by finding it in the Outliner. It's a good idea to keep our items in folders, and name them when appropriately, to make this easier.
 
-This roster is for <b>this unit only</b> and links your GitHub account, meaning we are able to quickly access your work. This will be important for pracs and submitting your assignment.
+### Quickly finding objects
+The outliner has a search bar at the top that you can use to quickly find objects within the scene and select them.
 
-If you did not select your Student ID, don't worry. You'll be able to select it next week when you accept that week's lab. If you couldn't find your Student ID, you'll need to contact the staff to have your ID added to the roster before you can select it.
+### Focusing on an object
+Once you've selected an object, you can press the F key to zoom in on them in the viewport.
 
-<b>Make sure you've connected your account to your Student ID before the Level Design assignment is due! Failure to do so may result in your assignment not being marked!</b>
+### Transforming an object
+To transform an object, first make sure you have the right transformation tool selected. You can change which tool you are using by pressing the corresponding icon in the toolbar attached to the viewport. 
 
-### Cloning your repo
-Clone this repo onto your work station. Officially, we support GitHub Desktop in this unit, but you can use any GitHub client you'd like.
+![TODO: Highlighting the transform tools in Unreal.]()
 
-To clone a repository, open up the GitHub Desktop app. Then, select File > Clone Repository. You should be able to find your repo under the "GitHub.com" tab. If not, you can copy and paste the URL to the repo instead. Remember to save onto the hard-drive, not the Claudius drive.
+These buttons are, in order:
 
-For more detailed instructions, ask your instructor or refer back to your COMP1151 notes. Remember to note where you are saving your repo!
+* Select: Allows you to select an object. (Hot key: Q)
+* Translate: Allows you to move an object's location. (Hot key: W)
+* Rotate: Allows you to change the rotation of an object.(Hot key: E)
+* Scale: Allows you to change the size of an object.(Hot key: R)
 
-![Image of the clone button](images/cloning.png)
+Along this tool bar, there are few other handy toggles for you to explore:
 
-## Task 2 Opening the project (5 min)
-The repo contains an Unreal Engine project. To open the project, first open Unreal Edtior. If you are working on your own device, you will instead need to open the Epic Games Launcher.
+* Coordinate Space: Allows you to switch between working in an object's local coordinates or the world coordinates. Useful for when you want to move an object in a specific way.
+* Surface snap: A toggle that allows you to set whether an object will snap to the nearest surface when moving it around in the viewport. Very, very andy to have turned on.
+* Snap amounts for transformations: Allows you to set (or turn off) the increments in which an object will snap between different transformations. Very handy to keep things lined up nicely and uniform!
 
-### Opening Unreal
-From here, open Unreal Engine 5.7.x. If you don't have it installed on your computer, you'll need to do so now. Make sure you areu sing Unreal Engine 5.7.x. Anything below or above 5.7 will not work. The final number denotes a hot fix, and there is general compatibility between these verisons (e.g., 5.7.1 and 5.7.2). Follow the prompts for installing and creating an account/logging in.
+Spend a bit of time manipulating a few objects in the level. See if you can realign the geometry in the starting area to something you prefer. This will get you familiar with the tools you'll need to rapidly create levels.
 
-### Opening the project
-You then want to open the project by pressing File > Open Project > Browse and heading to the folder you saved the repo into, then Prac 01 Unreal Project > COMP2150_LDTemplate.uproject.
+### Duplicating Objects
+To duplicate an object, either right click the object in the viewport and select duplicate, or hold down the ALT key while performing a transformation to essentially "pull out" a clone from the original object. Very handy for building out geometry once you've got a few pieces in place!
 
-If you're struggling with this step, don't get frustated. Call over your instructor to give you a hand.
+### Moving to camera
+If it's easier for you to fly your camera to where you want the object to be than to move it there, you can right click on an object in the Outliner and select "Move object to camera" to have it move to that position. You'll generally need to do some re-adjustments from here.
 
-When the project opens up, you should be inside the map called Lvl_Intro. You're ready to go!
+### Adding objects
 
-![TODO: An image of the sample scene.]()
+## Placing objects in the scene
+To place an object in the scene, first find it in the content drawer, then drag it into the viewport. 
 
-## Play and discuss (15 min)
-Now it's time to play Cryoshock! A small intro level has been created for you to introduce you to the game's core mechanics. You can run the game by pressing the Green play button at the top of the viewport.
 
-Before you dive in, the controls are:
 
-| Key  | Action |
-| ------------- | ------------- |
-| WASD  | Move  |
-| Mouse movement  | Look  |
-| Space bar | Jump |
-| Left click (hold and release) | Blink (when unlocked)|
-| Right click (hold) | Activate shield (when unlocked)|
-| R | Respawn |
-| Esc| Closes the game|
-
-As you play through the game, consider the following:
-
-* What kind of game is this? What genre terms would you use to describe it?
-* Considering this game through the lens of playful design, what opportunities of for play are present here?
-* What questions do you have about the mechanics? Try thinking about them in terms of "what happens when..."?
-
-Try chatting through these with the students around you once you've had a run through or two. Your instructor will work with you on sharing your ideas and observations.
-
-## Mechanic and Dynamics analysis (30 min)
-Your instructor will place you in small groups and assign you one of the following mechanics:
-
-* Running and jumping
-* Moving Platforms
-* Doors and Switches
-* Spike Pits
-* Blinking
-* Cryo Fields
-* Turrets
-* Shields
-
-Your job is to experiment with this mechanic and analyse:
-
-* What is the purpose of this mechanic? What does it afford the player to do? How does it challenge them?
-* What are its paramters that you can change as a level designer? What happens when you take these to the extreme?
-* How does this mechanic interact with others? What happens when you combine them unexpected ways (spatially, or by combining objects)?
-
-To figure this out, you'll need to start editing the level and modifying objects in your scene. Your instructor won't go over this on the board, so check these two sheets to help you:
-
-* [Intro to editing in Unreal](unrealintro.md)
-* [Documentation on mechanics](mechanics.md)
-
-Call over your instructor if you need help, and collaborate in your groups!
-
-Make sure someone is writing down your findings/observations, and that you are preparing a small demo to show your peers.
-
-### Saving, committing and pushing your work
-Don't forget to save, commit and push your work. This was a good habit to get into in COMP1151, and a good one to stick with this semester! Call over your instructor if you've forgotten how to do this.
-
-## Sharing our work (20 min)
-Your instructor will direct you on sharing your work with your peers. Get ready to show your work to others and have them play, critique and add to your discoveries.
-
-When playing the work of others and listening to their observations, remember to respond with respect: feedback should be constructive and encouraging, not contrary and diminishing.
-
-### Reflect & Iterate
-With the remaining time, think about what you've learnt from others and how this can apply to what you created. Did it change the way you thought about the mechanics you were investigating? If you knew that earlier, how might it have changed what you did in this class?
-
-## Next Week
-Next week, we will be building some challenges and iterating on them with this toolkit. You'll be creating a whole new repo next week, so don't worry about blowing stuff up in this one! Also, if you've found any bugs, please let Cam know by posting on the iLearn forums so we can fix them (or mournfully explain why we can't!).

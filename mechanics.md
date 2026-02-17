@@ -38,8 +38,7 @@ The blink upgrade will grant the player the blink ability upon collision.  There
 ### Shield Upgrade
 The shield upgrade will grant the player the shield ability upon collision.  There are no editable paramaters.
 
-## Environment and interactables
-### Moving Platform
+## Environment and interactables### Moving Platform
 The moving platform will move between two points. It has the following paramaters:
 * Nodes: Other game objects in the game world, represented by spheres. After placing a moving platform in the scene, you can adjust the position of Node0Obj and Node1Obj to control the points the platform will move between. Be careful not to adjust the sphere meshes by mistake!
 * Move Speed: How fast the platform will move.
@@ -75,7 +74,7 @@ The end game door. When the player enters it after collecting three keys, the ga
 * Level to Load: The level the door loads when the player enters. You shouldn't change this.
 
 ## Hazards
-### Spike Pit and Cryo Field.
+### Spike Pit and Cryo Field
 The spike pit is a solid object that damages the player on collision. The cryofield is transluscent, but will damage the player on collision unless they are blinking. Paramters:
 
 * Damage Amount: How much damage the spikes do to the player.
