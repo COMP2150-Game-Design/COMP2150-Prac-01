@@ -24,32 +24,48 @@ The player can run, jump, and (when unlocked) use the left mouse button to "blin
 ## Checkpoint
 Checkpoints can be placed anywhere in the game world, but have no paramters to edit. When the player collides with a checkpoint, they will respawn there upon death.
 
+![Image of a checkpoint.](images/checkpoint.png)
+
 ## Pick-ups
 
 ### HealthPack Pick-up
 The HealthPack is a pick-up which grants the player health on collision. Individual health packs can grant different amounts of health, based on the "health" paramater.
 
+![Image of a health pack.](images/healthpack.png)
+
 ### Keys
 Keys are needed to unlock the end game door. Three keys must be placed in every level to unlock the door. There are no editable paramaters.
+
+![Image of a key.](images/key.png)
 
 ### Blink Upgrade
 The blink upgrade will grant the player the blink ability upon collision.  There are no editable paramaters.
 
+![Image of a blink upgrade.](images/blink.png)
+
 ### Shield Upgrade
 The shield upgrade will grant the player the shield ability upon collision.  There are no editable paramaters.
 
-## Environment and interactables### Moving Platform
+![Image of a shield upgrade.](images/shield.png)
+
+## Environment and interactables
+
+### Moving Platform
 The moving platform will move between two points. It has the following paramaters:
 * Nodes: Other game objects in the game world, represented by spheres. After placing a moving platform in the scene, you can adjust the position of Node0Obj and Node1Obj to control the points the platform will move between. Be careful not to adjust the sphere meshes by mistake!
 * Move Speed: How fast the platform will move.
 * Hang Time: How long in seconds the platform will rest when it reaches a node before moving to the next.
 * Active: Whether the platform is active or not. This is useful if you want to have it activated by a Switch.
 
+![Image of a moving platform.](images/movingplatform.png)
+
 ### Door
 Doors are closed by default, and open when their corresponding switch is activated. Parameters:
 
 * Door Speed: How fast the door opens or closes.
 * Open: Whether the door is open or not on start.
+
+![Image of a door.](images/door.png)
 
 ### Switch
 Switches can be used to activate doors and moving platforms. To do this, they need to be linked to a BP_SwitchReceiver, which will be attached to a door or moving platform.
@@ -67,11 +83,15 @@ Other paramters:
 
 A switch will have a purple line moving from itself to its receiver.
 
+![Image of a switch.](images/switch.png)
+
 ### End-Game Door
 The end game door. When the player enters it after collecting three keys, the game ends. Paramaters:
 * Door speed: Controls how fast the door opens.
 * Open: Whether it is open or not. Useful for debugging.
 * Level to Load: The level the door loads when the player enters. You shouldn't change this.
+
+![Image of the end game door.](images/endgamedoor.png)
 
 ## Hazards
 ### Spike Pit and Cryo Field
@@ -81,8 +101,14 @@ The spike pit is a solid object that damages the player on collision. The cryofi
 * Type: The type of hazard this is. Changing this will effect its behaviour. For instance, setting this to "Projectile" would remove any knockback force and change how it interacted with turrets.
 * Knockback Force: How much force the player is knocked back with on collision.
 
+![Image of the spike pit.](images/spikes.png)
+
+![Image of the cryofield.](images/cryofield.png)
+
 ### Turret Head
 A turret that will shoot projectiles at the player if it sees them. Paramaters:
 * Rotation Speed: How fast the turret will rotate to "chase" the player.
 * Cooldown rate: The rate between firing projectiles.
 * Inactive Time: How long the turret turns off for if it is hit by a projectile.
+
+![Image of the turret head.](images/turrethead.png)
