@@ -2,7 +2,7 @@
 
 This document is meant as a resource to help you get started with using Unreal Engine. If you're already familiar with Unreal, such as through COMP1170 or your own studies, you may already know a lot of this. However, feel free to come back to this document whenever you need to brush up on the fundamentals of using the engine.
 
-Note: additional features, like working with materials, will be introduced when necessary in class.
+Note: additional features will be introduced when necessary in class.
 
 The default layout of Unreal Engine should look somewhat familiar to you if you've used Unity, Blender, or other game and 3D modelling tools. But it has its own quirks Taking a look at the main view of Unreal Engine, we can see:
 
@@ -28,10 +28,12 @@ As a level designer, you'll spend a lot of your time working in the viewport. Sp
 # Placing and manipulating objects
 To modify the position, scale or rotation of an object, you'll first want to select it. You can do this either in the Viewport directly, or by finding it in the Outliner. It's a good idea to keep our items in folders, and name them when appropriately, to make this easier.
 
+![A selected spikepit in both viewport and outliner](images/selectedspikes.png)
+
 ### Quickly finding objects
 The outliner has a search bar at the top that you can use to quickly find objects within the scene and select them. When you have, they will be higlighted in the viewport and outliner.
 
-![A selected spikepit in both viewport and outliner](images/selectedobject.png)
+![Searching for an item in the outliner](images/searching.png)
 
 ### Focusing on an object
 Once you've selected an object, you can press the F key to zoom in on them in the viewport.
@@ -39,7 +41,7 @@ Once you've selected an object, you can press the F key to zoom in on them in th
 ### Transforming an object
 To transform an object, first make sure you have the right transformation tool selected. You can change which tool you are using by pressing the corresponding icon in the toolbar attached to the viewport. 
 
-![TODO: Highlighting the transform tools in Unreal.](images/transformtools.png)
+![TODO: Highlighting the transform tools in Unreal.](images/transformations.png)
 
 These buttons are, in order:
 
@@ -62,7 +64,7 @@ To duplicate an object, either right click the object in the viewport and select
 ### Moving to camera
 If it's easier for you to fly your camera to where you want the object to be than to move it there, you can right click on an object in the Outliner and select "Move object to camera" to have it move to that position. You'll generally need to do some re-adjustments from here.
 
-![Selecting the move to camera option from the dropdown.](images/movetocam.png)
+![Selecting the move to camera option from the dropdown.](images/moveobjecttocam.png)
 
 # Adding and removing objects
 
@@ -82,9 +84,6 @@ If you need to put the player in the game world, click the small Cube with a gre
 ## Combining objects
 You may wish to combine objects together in your scene, such as childing a spike pit to a moving platform. To do so, place both items into your scene. Then, in the outliner, select the object you wish to child to another and drag-and-drop it onto the other object.
 
-![A moving platform with a spike pit child.](images/movingspikes)
+![A moving platform with a spike pit child.](images/movingspikes.png)
 
 Much like parent-child relationships in other 3D engines, the child object will now inherit transformation qualities from the parent. This is a great way to start experimenting with mechanics and making your game unique!
-
-Note that you can save these combinations by creating Level Instances and Level Packed Actors. We'll be exploring these next week as a way to better author your own encounters and layouts.
-
