@@ -1,10 +1,10 @@
 # Week 01 - Intro to Unreal and Toy Analysis
 
-![TODO: An overview of the whole intro level map.]()
+![An overview of the whole intro level map.](images/leveloverview.png)
 
 Welcome to the COMP2150 Pracs! In these pracs, you'll be working on the digital side of game design: building levels, prototypes and games as you work towards your two major assessments.
 
-Today's class will be focused on getting familiar with Unreal Engine by way of exploring the game you will be building a level for for the first assignment. Your prac demonstrator will be going over slides and directing activities throughout the lesson, while this sheet will serve to give you further details as you go.
+Today's class will be focused on getting familiar with Unreal Engine by exploring the game you will be working with in the first assignment. Your prac demonstrator will be directing activities throughout the lesson, while this sheet will give you further details as you go.
 
 Don't hesitate to speak up if you are stuck or unsure about anything! GLHF!
 
@@ -28,14 +28,14 @@ When you clicked the link to accept this task, you would have been prompted to s
 
 ![Image of the roster](images/selectnumber.png)
 
-This roster is for <b>this unit only</b> and links your GitHub account, meaning we are able to quickly access your work. This will be important for pracs and submitting your assignment.
+This roster is for <b>this unit only</b> and links your student ID with your GitHub account, meaning we are able to quickly access your work. This will be important for pracs and submitting your assignment.
 
-If you did not select your Student ID, don't worry. You'll be able to select it next week when you accept that week's lab. If you couldn't find your Student ID, you'll need to contact the staff to have your ID added to the roster before you can select it.
+If you did not select your Student ID, you'll be able to select it next week when you accept that week's lab. If you couldn't find your Student ID, you'll need to contact Cameron (cameron.edmond@mq.edu.au) to have your ID added to the roster before you can select it.
 
 <b>Make sure you've connected your account to your Student ID before the Level Design assignment is due! Failure to do so may result in your assignment not being marked!</b>
 
 ### Cloning your repo
-Clone this repo onto your work station. Officially, we support GitHub Desktop in this unit, but you can use any GitHub client you'd like.
+Clone this repo onto your work station. We support GitHub Desktop in this unit, but you can use any GitHub client you'd like.
 
 To clone a repository, open up the GitHub Desktop app. Then, select File > Clone Repository. You should be able to find your repo under the "GitHub.com" tab. If not, you can copy and paste the URL to the repo instead. Remember to save onto the hard-drive, not the Claudius drive.
 
@@ -43,22 +43,24 @@ For more detailed instructions, ask your instructor or refer back to your COMP11
 
 ![Image of the clone button](images/cloning.png)
 
-## Task 2 Opening the project (5 min)
-The repo contains an Unreal Engine project. To open the project, first open Unreal Edtior. If you are working on your own device, you will instead need to open the Epic Games Launcher.
+## Task 2: Opening the project (5 min)
+The repo contains an Unreal Engine project. To open the project, first open Unreal Editor. If you are working on your own device, you will instead need to open the Epic Games Launcher.
 
 ### Opening Unreal
-From here, open Unreal Engine 5.7.x. If you don't have it installed on your computer, you'll need to do so now. Make sure you areu sing Unreal Engine 5.7.x. Anything below or above 5.7 will not work. The final number denotes a hot fix, and there is general compatibility between these verisons (e.g., 5.7.1 and 5.7.2). Follow the prompts for installing and creating an account/logging in.
+From here, open Unreal Engine 5.7.x. If you don't have it installed on your computer, you'll need to do so now. Make sure you are using Unreal Engine 5.7.x. Anything below or above 5.7 will not work. The final number denotes a hot fix, and there is general compatibility between these verisons (e.g., 5.7.1 and 5.7.2). Follow the prompts for installing and creating an account/logging in.
 
 ### Opening the project
-You then want to open the project by pressing File > Open Project > Browse and heading to the folder you saved the repo into, then Prac 01 Unreal Project > COMP2150_LDTemplate.uproject.
+You then want to open the project by pressing My Projects > Browse and heading to the folder you saved the repo in, then Prac 01 Unreal Project > COMP2150_LDTemplate.uproject.
 
 If you're struggling with this step, don't get frustated. Call over your instructor to give you a hand.
 
 When the project opens up, you should be inside the map called Lvl_Intro. You're ready to go!
 
-![TODO: An image of the sample scene.]()
+Note: If you are working on your own device and having difficulty running the game, you can try lowering the graphic settings. To do this, head to Project Settings > Target Hardware and set this to "Scalable".
 
-## Play and discuss (15 min)
+![Setting the graphics settings.](images/graphicssettings.png)
+
+## Task 3: Play and discuss (15 min)
 Now it's time to play Cryoshock! A small intro level has been created for you to introduce you to the game's core mechanics. You can run the game by pressing the Green play button at the top of the viewport.
 
 Before you dive in, the controls are:
@@ -73,15 +75,17 @@ Before you dive in, the controls are:
 | R | Respawn |
 | Esc| Closes the game|
 
+![An image of the sample scene.](images/playingthegame.png)
+
 As you play through the game, consider the following:
 
 * What kind of game is this? What genre terms would you use to describe it?
-* Considering this game through the lens of playful design, what opportunities of for play are present here?
+* Considering this game through the principle of playful design, what opportunities for play are present here?
 * What questions do you have about the mechanics? Try thinking about them in terms of "what happens when..."?
 
 Try chatting through these with the students around you once you've had a run through or two. Your instructor will work with you on sharing your ideas and observations.
 
-## Mechanic and Dynamics analysis (30 min)
+## Task 4: Mechanic and Dynamics analysis (30 min)
 Your instructor will place you in small groups and assign you one of the following mechanics:
 
 * Running and jumping
@@ -96,28 +100,35 @@ Your instructor will place you in small groups and assign you one of the followi
 Your job is to experiment with this mechanic and analyse:
 
 * What is the purpose of this mechanic? What does it afford the player to do? How does it challenge them?
-* What are its paramters that you can change as a level designer? What happens when you take these to the extreme?
-* How does this mechanic interact with others? What happens when you combine them unexpected ways (spatially, or by combining objects)?
+* What are its parameters that you can change as a level designer? What happens when you take these to the extreme?
+* How does this mechanic interact with others? What happens when you combine them in unexpected ways (spatially, or by combining objects)?
 
-To figure this out, you'll need to start editing the level and modifying objects in your scene. Your instructor won't go over this on the board, so check these two sheets to help you:
+To figure this out, you'll need to start editing the level and modifying objects in your scene. To really get into things, it might be more convenient to create a new level and work from here. To do so, head to File > New Level, then select "Basic" to create a level with a basic landscape and player. This will allow you to test out mechanics in isolation.
+
+![Selecting the New Level option.](images/newlevel.png)
+![Creating a basic level.](images/basic.png)
+
+Your instructor won't go over all of Unreal's workings on the board, so check these two sheets below to help you, and call them over if you are stuck. Don't forget to collaborate!
 
 * [Intro to editing in Unreal](unrealintro.md)
 * [Documentation on mechanics](mechanics.md)
 
-Call over your instructor if you need help, and collaborate in your groups!
-
 Make sure someone is writing down your findings/observations, and that you are preparing a small demo to show your peers.
 
 ### Saving, committing and pushing your work
-Don't forget to save, commit and push your work. This was a good habit to get into in COMP1151, and a good one to stick with this semester! Call over your instructor if you've forgotten how to do this.
+Don't forget to save, commit and push your work. This was a good habit to get into in COMP1151, and a good one to stick with this semester! 
 
-## Sharing our work (20 min)
+If you've created a new level, make sure you save it in the "Maps" folder with the "Lvl_" prefix. These naming conventions are standard across Unreal Engine communities, and getting used to them now is great practice.
+
+Call over your instructor if you've forgotten how to push and commit work.
+
+## Task 5: Sharing our work (20 min)
 Your instructor will direct you on sharing your work with your peers. Get ready to show your work to others and have them play, critique and add to your discoveries.
 
 When playing the work of others and listening to their observations, remember to respond with respect: feedback should be constructive and encouraging, not contrary and diminishing.
 
-### Reflect & Iterate
+## Reflect & Iterate
 With the remaining time, think about what you've learnt from others and how this can apply to what you created. Did it change the way you thought about the mechanics you were investigating? If you knew that earlier, how might it have changed what you did in this class?
 
 ## Next Week
-Next week, we will be building some challenges and iterating on them with this toolkit. You'll be creating a whole new repo next week, so don't worry about blowing stuff up in this one! Also, if you've found any bugs, please let Cam know by posting on the iLearn forums so we can fix them (or mournfully explain why we can't!).
+Next week, we will be building some challenges and iterating on them with this toolkit. You'll be working with a new repo next week, so don't worry about blowing stuff up in this one! Also, if you've found any bugs, please let Cam know by posting on the iLearn forums so we can fix them (or mournfully explain why we can't!).

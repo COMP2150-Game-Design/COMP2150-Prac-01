@@ -16,6 +16,11 @@ The CryoShock Unreal project includes a folder labelled COMP2150 inside the Cont
 
 With the exception of geometry and level prototyping, you should only be placing objects into the game world with the BP_ prefix, which suggests they are a Blueprint (a game object), rather than a mesh. For this reason, most meshes have been placed away in respective "Mesh" folders to avoid confusion.
 
+## Editing object properties
+Any paramaters you are able to modify in the assignment have been exposed in the editor. To alter these, select an object in the game world, then select the "General" tab in the Outliner. There should be a "Default" heading with paramaters you can set.
+
+![Setting paramaters.](images/editingobjects.png)
+
 ## The player
 The player character is not to be edited, and but you can control where they spawn in the world. To place them into the game world, click the small cube with a green plus sign above the viewport and then go to Basic > Player Start. If you already have a Player Start in your level, instead you want to move this to where the player should spawn.
 
